@@ -46,7 +46,7 @@ def rossler_predict(init_state, T, dt, params):
     return pX
 
 
-def rossler_X_obj(x, params, dt, x0, lam):
+def rossler_X_obj(x, params, dt, x0, lam, d):
     '''
     This function returns the objective value in eq. (9) of the paper. The function will be passed to the
     scipy.optimize.minimize() function as a parameter.
@@ -76,7 +76,7 @@ def rossler_X_obj(x, params, dt, x0, lam):
     return objval
 
 
-def rossler_X_grad(x, params, dt, x0, lam):
+def rossler_X_grad(x, params, dt, x0, lam, d):
     '''
     This function returns the gradient with respect to the states X in the eq. (9) of the paper.
     The function will be passed to the scipy.optimize.minimize() function as a parameter.
